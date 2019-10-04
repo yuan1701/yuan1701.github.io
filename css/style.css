@@ -29,6 +29,15 @@ ul,label{
 body a:hover{
     text-decoration:none;
 }
+.fixDiv{
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: #008B8B;
+    z-index: 8;
+    width: 100%;
+}
+
 /*--baner--*/
 .banner {
     background:url(../images/a.jpg)no-repeat center 0px;
