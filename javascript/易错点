@@ -1,0 +1,3 @@
+1.$('div').appendChild()is not function?
+appendChild()是原生dom对象的方法
+jquery的是 $("#mainContent").append(newDiv1);
