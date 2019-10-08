@@ -1,43 +1,55 @@
-    
 <!DOCTYPE html>
 <html lang="zh-cn">
-    <head>
-        <meta charset="utf-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta http-equiv="Cache-Control" content="no-siteapp"/>
-		<meta name="renderer" content="webkit" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-        <meta name="keywords" content="yuan1701.github.io" />
-        <meta name="description" content="yuan1701.github.io" />
-	    <meta name="author" content="yuan1701" />
-        <meta name="baidu-site-verification" content="kMIXFHNzZB" />
-        <title>yuan1701.github.io</title>
-    </head>
-    <body>
-        <div class="pui-layout pui-bg-blue-300 page-layout">
-            <div class="pui-text-center page-main">
-                <p><a href="./"><img src="theme/images/avatar.jpg" alt="yuan1701's avatar" class="pui-z-depth-2" /></a></p>
-                <h1>Hello world!<small class="pui-block pui-text-sm pui-text-white">yuan1701.github.io</small></h1>  
-                <menu>
-                    <ul class="pui-menu pui-menu-inline pui-menu-radius">
-                        <li>
-                            <a href="./webpack/"><i class="editormd-logo"></i> webpack</a>
-                        </li>
-                        <li>
-                            <a href="./javascript/"><i class="planeui-logo-lg"></i>javascript</a>
-                        </li>
-                        <li>
-                            <a href="./vue/"><i class="fa fa-cube"></i> vue</a>
-                        </li>
-                    </ul>
-                </menu>   
-                <footer>
-                    Copyright &copy; 2015<br/>Design & Develop By: <a href="https://github.com/yuan1701" target="_blank">yuan1701</a>
-                 <a href="https://github.com/yuan1701" target="_blank"><i class="fa fa-github fa-lg"></i></a>
-                  
-                
-                </footer>           
-            </div>           
-        </div>
-    </body>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="keywords" content="yuan1701.github.io" />
+    <meta name="description" content="yuan1701.github.io" />
+    <meta name="author" content="yuan1701" />
+    <meta name="baidu-site-verification" content="kMIXFHNzZB" />
+    <title>yuan1701.github.io</title>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js">
+    </script>
+    <link rel="stylesheet" href="theme/style.css">
+</head>
+
+<body>
+    <div class="hero_black">
+        <img src="./theme/images/avatar.jpg" alt="">
+    </div>
+    <div class="content">
+
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente natus sed nostrum consequatur odio porro
+            quia, quis eaque quos distinctio quae rerum officia eos quam nisi architecto ipsum nihil! Qui.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime at similique officia dolores harum iure cum
+            consectetur, ipsa obcaecati sint voluptatum commodi unde aut voluptatibus alias adipisci, repellendus omnis
+            earum.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus animi necessitatibus sequi, nisi ratione
+            ad corporis hic dignissimos aliquam alias quasi repudiandae, neque assumenda corrupti iure dolores eaque
+            magnam? Quis.</p>
+    </div>
+</body>
+<script>
+    if ($(this).width() > 1200) {
+        $(window).scroll(function () {
+            var scrollPos = $(this).scrollTop()
+
+            $('.hero_black').css({
+                'background-size': 100 + scrollPos + '%'
+            })
+        })
+
+    } else {
+        $('.hero_black').css({
+            'height': '300px'
+        })
+    }
+
+
+</script>
+
 </html>
