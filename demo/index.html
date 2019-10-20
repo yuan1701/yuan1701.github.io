@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>html css js demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="./css/swiper.min.css">
+
+  <!-- Demo styles -->
+  <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+      background: rgb(51, 34, 44);
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color:#000;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    a{
+        border-radius: 4px;
+        display: inline-block;
+        border: 1px solid;
+        color: black;
+        text-decoration: none;
+        padding: 10px;
+        margin-left: 20px
+    }
+    .swiper-container {
+      width: 100%;
+      overflow: hidden;
+    }
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+    }
+    .card{
+        position: relative;
+        width: 400px;
+        height: 700px;
+        margin: 0 auto;
+        background-color: #ffffff;
+    }
+    .card .sliderText{
+        color: #ffffff;
+        background-color: yellow;
+        text-align: center;
+        height: 150px;
+        font-weight: 600;
+        font-size: 3rem;
+        line-height: 150px;
+        padding: 0 10px;
+        overflow: hidden;
+    }
+    .card .demo-img{
+        width: 100%;
+        height: 300px;
+    }
+    .card .content{
+        margin: 20px
+    }
+    .swiper-pagination{
+        bottom: 10px;
+    }
+  </style>
+</head>
+<body onload="init()">
+  <!-- Swiper -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+       <div class="swiper-slide card">
+            <p class="sliderText">
+                25-CardEffects
+            </p>
+            <img class="demo-img" src="./images/nature-10.jpg">
+
+            <div class="content">
+                <p>1. 请左右滑动查看更多。</p>
+                <p>2. 点击“获取源码”获取该项目源码。</p>
+                <p>3. 点击“效果演示”查看效果预览。</p>
+                <br>
+                <a href="">获取源码</a>
+                <a href="">效果演示</a>
+            </div>
+        </div>
+     
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="./js/swiper.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    const list = [{
+        title:'01-旋转太极',
+        src:'./images/nature-1.jpg',
+        source:'./01-旋转太极.html',
+        link:'./01-旋转太极.html',
+
+    },{
+        title:'02',
+        src:'./images/nature-2.jpg',
+        source:'./index.html',
+        link:'./index.html',
+    }]
+    function init(){
+        const wrapper = document.getElementsByClassName('swiper-wrapper')[0]
+        const content = `<div class="content">
+                <p>1. 请左右滑动查看更多。</p>
+                <p>2. 点击“获取源码”获取该项目源码。</p>
+                <p>3. 点击“效果演示”查看效果预览。</p>
+                <br>
+                <a href="">获取源码</a>
+                <a href="">效果演示</a>
+            </div>`
+
+        list.forEach(ele=>{
+            const slide = document.createElement('div')
+            const slideText = document.createElement('p')
+            const demoImg = document.createElement('img')
+            const slideContent = document.createElement("div")
+
+             
+            slide.className='swiper-slide card'
+            slideText.classList.add('sliderText')
+            slideContent.className='content'
+            slideContent.innerHTML='<p>1. 请左右滑动查看更多。</p><p>2. 点击“获取源码”获取该项目源码。</p><p>3. 点击“效果演示”查看效果预览。</p><br><a href="">获取源码</a><a href="">效果演示</a>'
+
+            slideText.innerText = ele.title
+            demoImg.className = 'demo-img'
+            demoImg.src = ele.src
+
+            slideContent.childNodes[4].href = ele.source
+            slideContent.childNodes[5].href = ele.link
+            
+            slide.appendChild(slideText)
+            slide.appendChild(demoImg)
+            slide.appendChild(slideContent)
+            wrapper.appendChild(slide)
+        })
+
+        const swiper = new Swiper('.swiper-container', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows : true,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            });
+    }
+  </script>
+</body>
+</html>
