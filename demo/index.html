@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>html css js demo</title>
+  <title>demo效果</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 
   <!-- Link Swiper's CSS -->
@@ -75,22 +75,6 @@
   <!-- Swiper -->
   <div class="swiper-container">
     <div class="swiper-wrapper">
-       <div class="swiper-slide card">
-            <p class="sliderText">
-                25-CardEffects
-            </p>
-            <img class="demo-img" src="./images/nature-10.jpg">
-
-            <div class="content">
-                <p>1. 请左右滑动查看更多。</p>
-                <p>2. 点击“获取源码”获取该项目源码。</p>
-                <p>3. 点击“效果演示”查看效果预览。</p>
-                <br>
-                <a href="">获取源码</a>
-                <a href="">效果演示</a>
-            </div>
-        </div>
-     
     </div>
     <!-- Add Pagination -->
     <div class="swiper-pagination"></div>
@@ -106,30 +90,36 @@
         src:'./images/nature-1.jpg',
         source:'https://github.com/yuan1701/yuan1701.github.io/blob/master/demo/01-%E6%97%8B%E8%BD%AC%E5%A4%AA%E6%9E%81.html',
         link:'./01-旋转太极.html',
-
     },{
-        title:'02',
+        title:'02-bubble',
         src:'./images/nature-2.jpg',
-        source:'./index.html',
-        link:'./index.html',
+        source:'https://github.com/yuan1701/yuan1701.github.io/blob/master/demo/01-%E6%97%8B%E8%BD%AC%E5%A4%AA%E6%9E%81.html',
+        link:'./02-bubble.html',
+    },{
+        title:'03-酷炫盒子',
+        src:'./images/nature-3.jpg',
+        source:'https://github.com/yuan1701/yuan1701.github.io/blob/master/demo/01-%E6%97%8B%E8%BD%AC%E5%A4%AA%E6%9E%81.html',
+        link:'./03-酷炫盒子.html',
+    },{
+        title:'04-loading',
+        src:'./images/nature-4.jpg',
+        source:'https://github.com/yuan1701/yuan1701.github.io/blob/master/demo/01-%E6%97%8B%E8%BD%AC%E5%A4%AA%E6%9E%81.html',
+        link:'./04-加载状态&渐变背景.html',
+    },{
+        title:'05-时钟',
+        src:'./images/nature-5.jpg',
+        source:'https://github.com/yuan1701/yuan1701.github.io/blob/master/demo/01-%E6%97%8B%E8%BD%AC%E5%A4%AA%E6%9E%81.html',
+        link:'./05-canvas时钟.html',
     }]
+
     function init(){
         const wrapper = document.getElementsByClassName('swiper-wrapper')[0]
-        const content = `<div class="content">
-                <p>1. 请左右滑动查看更多。</p>
-                <p>2. 点击“获取源码”获取该项目源码。</p>
-                <p>3. 点击“效果演示”查看效果预览。</p>
-                <br>
-                <a href="">获取源码</a>
-                <a href="">效果演示</a>
-            </div>`
 
         list.forEach(ele=>{
             const slide = document.createElement('div')
             const slideText = document.createElement('p')
             const demoImg = document.createElement('img')
             const slideContent = document.createElement("div")
-
              
             slide.className='swiper-slide card'
             slideText.classList.add('sliderText')
