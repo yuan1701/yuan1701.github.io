@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>06-loading</title>
+</head>
+<style>
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.bar{
+    width: 6px;
+    height: 60px;
+    background: #fff;
+    display: inline-block;
+    margin: 0 1px;
+    transform-origin: bottom;
+    animation: loading 1.5s ease-in-out infinite
+}
+
+@keyframes loading {
+    0%{
+        transform: scaleY(0.1);
+        background-color: #fff
+    }
+    100%{
+        transform: scaleY(1);
+        background-color: #2ecc71
+    }
+}
+
+</style>
+<body>
+    <div class="loading"></div>
+</body>
+<script>
+    var load = document.getElementsByClassName('loading')[0]
+    for (let index = 0; index < 8; index++) {
+        const element = document.createElement('div')
+        element.classList.add("bar")
+        element.style.animationDelay = 0.1*(index+1)+'s'
+        load.appendChild(element)
+    }
+
+</script>
+</html>
