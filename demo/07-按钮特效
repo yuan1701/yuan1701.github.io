@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="keywords" content="yuan1701.github.io" />
+    <meta name="description" content="yuan1701.github.io" />
+    <meta name="author" content="yuan1701" />
+    <meta name="baidu-site-verification" content="kMIXFHNzZB" />
+    <title>yuan1701.github.io</title>
+    <style>
+        ul li{
+            list-style: none;
+            display: inline-block;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            min-height: 100vh;
+            background-color: #060c21;
+
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center
+        }
+
+        /* 导航样式start */
+
+        a{
+            display: block;
+            text-decoration-line: none;
+            padding: 15px 30px;
+            font-size: 24px;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 0 40px rgba(0, 0,0,0.5);
+            position: relative;
+            overflow: hidden;
+            margin: 0 20px;
+        }
+        a span{
+            display: block;
+            position: absolute;
+            background: #03a9f4;
+        }
+        a span:nth-child(1){
+            left: 0;
+            top: 0;
+            width: 2px;
+            height: 100%;
+            transform: translateY(0)
+        }
+        a:hover span:nth-child(1){
+            transition: 0.5s;
+            transform: translateY(-100%)
+        }
+        a span:nth-child(2){
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 2px;
+            transform: translateX(-100%)
+
+        }
+        a:hover span:nth-child(2){
+            transition: 0.5s;
+            transition-delay: 0.25s;
+            transform: translateX(100%)
+        }
+        a span:nth-child(3){
+            right: 0;
+            top: 0;
+            width: 2px;
+            height: 100%;
+            transform: translateY(-100%)
+
+        }
+        a:hover span:nth-child(3){
+            transition: 0.5s;
+            transition-delay: 0.5s;
+            transform: translateY(100%)
+        }
+        a span:nth-child(4){
+            right: 0;
+            top: 0;
+            width: 2px;
+            height: 100%;
+            transform: translateY(0)
+
+        }
+        a:hover span:nth-child(4){
+            transition: 0.5s;
+            transition-delay: 0.25s;
+            transform: translateY(100%)
+        }
+        a span:nth-child(5){
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            transform: translateX(100%)
+
+        }
+        a:hover span:nth-child(5){
+            transition: 0.5s;
+            transition-delay: 0.5s;
+            transform: translateX(-100%)
+        }
+        a span:nth-child(6){
+            right: 0;
+            left: 0;
+            width: 2px;
+            height: 100%;
+            transform: translateY(100%)
+
+        }
+        a:hover span:nth-child(6){
+            transition: 0.5s;
+            transition-delay: 0.5s;
+            transform: translateY(-100%)
+        }    
+    
+    </style>
+</head>
+
+<body>
+    <div class="hero_black">
+        <img src="./theme/images/avatar.jpg" alt="">
+        <ul class="nav">
+            <li><a href="https://blog.csdn.net/a_xixi">blog <span></span><span></span><span></span><span></span><span></span><span></span></a></li>
+            <li><a href="/">plane UI <span></span><span></span><span></span><span></span><span></span><span></span></a></li>
+            <li><a href="/">小小相册 <span></span><span></span><span></span><span></span><span></span><span></span></a></li>
+        </ul>
+    </div>
+</body>
+
+</html>
