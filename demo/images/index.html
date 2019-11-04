@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue的修饰符</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+
+        <child :lists="listPhone">
+    
+            <div slot-scope="a">
+    
+                <div v-if="a.phone.id===1">这是{{a.phone.brand}}</div>
+    
+                <div v-else>{{a.phone.brand}}</div>
+    
+            </div>
+    
+        </child>
+    
+    </div>
+    
+    <template id="temp">
+    
+        <div>
+    
+            <ul>
+    
+                <li v-for="list in lists">
+    
+                    <slot :phone="list"></slot>
+    
+                </li>
+    
+            </ul>
+    
+        </div>
+    
+    </template>
+    
+    <script type="text/javascript">
+    
+        //定义组件
+    
+        Vue.component('child',{
+    
+            props:['lists'],
+    
+            template:"#temp"
+    
+        })
+    
+        //创建vue实例
+    
+        var vm = new Vue({
+    
+            el: "#app",
+    
+            data:{
+    
+                listPhone:[
+    
+                    {id:1,brand:"苹果"},
+    
+                    {id:2,brand:"华为"},
+    
+                    {id:3,brand:"荣耀"},
+    
+                    {id:4,brand:"小米"}
+    
+                ]
+    
+            }
+    
+        })
+    
+    </script>
+
+    
+</body>
+</html>
