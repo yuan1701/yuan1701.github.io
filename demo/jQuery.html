@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>树形图</title>
+    <script src="../js/echarts.js"></script>
+    <style>
+    body{
+        overflow: hidden;
+    }
+    </style>
+</head>
+<body>
+    
+    <div id="main" style="width: 100vw;height:100vh;"></div>
+    <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('main'));
+
+        var data2 = {
+            "name": "jQuery",
+            "children": [
+                {
+                    "name": "jQuery基础",
+                    "children": [
+                        {
+                            "name": "初识jQuery",
+                            "children":[
+                                {
+                                    "name": "是一个免费开源的js库", 
+                                    "children":[
+                                        {"name": "是一个免费开源的js库", "value": 0101},
+                                    ]
+                                },
+                                {
+                                    "name": "为什么使用jQuery",
+                                    "children": [
+                                        {"name": "方便完成web前端的相关操作，例如：节点操作，元素操作，事件绑定，ajax请求，且解决了大多数的兼容问题", "value": 0101}
+                                    ]
+                                },
+                                {"name": "如何使用jQuery", "value": 0101},
+
+                                ]
+                        },
+                        {
+                            "name":"入口函数",
+                            "children":[
+                                {name:'jQuery入口函数'},
+                                {name:'加载模式对比'},
+                                {name:'jQuery入口函数的其他写法'},
+                                {name:'解决冲突问题'}
+                            ]
+                        },
+                        {
+                            "name":"核心函数",
+                             "children":[
+                                {name:'传递函数'},
+                                {name:'传递选择器'},
+                                {name:'传递DOM对象'},
+                                {name:'传递html'}
+                            ]
+                        },
+                        {
+                            "name":"静态方法",
+                            children:[
+                                {name:'each(obj,[callback])'},
+                                {name:'map(obj,[callback])'},
+                                {name:'trim(str)'},
+                                {name:'isArray(obj)'},
+                                {name:'isFunction(obj)'},
+                                {name:'isWindow(obj)'},
+                                {name:'holdReady()--暂停ready执行'},
+
+
+                            ]
+                        },
+                        {
+                            "name":"attr和prop"
+                        },
+                        {
+                            "name":"jQuery插件"
+                        }
+                        
+                    ]
+                },
+                {
+                    name:'节点操作',
+                    children:[
+                        {name:'创建元素 $("<div></div>")'},
+                        {
+                            name:'插入元素',
+                            children:[
+                                {name:'内容尾部添加 $(parent).append(newNode) 或 newNode.appendTo(parent)'},
+                                {name:'内容头部添加 $(parent).prepend(newNode) 或 newNode.prependTo(parent)'},
+                                {name:'内容外部之后添加 $(parent).after(newNode) 或 newNode.insertAfter(parent)'},
+                                {name:'内容外部之前添加 $(parent).before(newNode) 或 newNode.insertBefore(parent)'},
+
+                            ]
+                        },
+                        {name:'删除元素 $(element).remove() $(element).empty()'},
+                        {name:'替换节点 $(element).replaceWith(newNode)'},
+                        {name:'克隆节点 $(element).clone()'},
+                        {name:'包裹元素 $(element).wrap("<div></div>")  $(element).unwrap()'},
+                    ]
+                },
+                {
+                    name:'查找元素',
+                    children:[
+                        {
+                            name:'基本获取',
+                            children:[
+                                {name:'通过id查找元素 $("#id")'},
+                                {name:'通过标签查找元素 $("div")'},
+                                {name:'通过class查找元素 $(".class")'},
+                                {name:'逗号并列获取 $("#id,.class")'},
+                                {name:'空格层级获取 $("#id class")'},
+                            ]
+                        },
+                        {
+                            name:'过滤获取',
+                            children:[
+                                {name:'获取第一个元素 $("li:first")'},
+                                {name:'获取最后一个元素 $("li:last")'},
+                                {name:'获取指定索引的元素 $("li:eq(5)") ?'},
+                                {name:'获取包含指定文本的元素 $("li:contains(text)")'},
+                                {name:'通过属性查找元素 $("input[name=username]")'},
+                            ]
+                        },
+                        {
+                            name:'父子获取',
+                            children:[
+                                {name:'获得所有子元素 $("ul").children() '},
+                                {name:'获得第一个子元素 $("ul li:first-child") '},
+                                {name:'获得最后一个子元素 $("ul li:last-child") '},
+                                {name:'获得指定索引的元素 $("ul li:nth-child(n)") '},
+                                {name:'获得下一个元素 $("ul").next() '},
+                                {name:'获取前一个元素 $("ul").prev() '},
+                                {name:'获取父级元素 $("ul").parent() '},
+                                {name:'获取先辈元素 $("ul").parents(".class") '},
+                                {name:'获取同辈元素 $("ul").siblings() '},
+                                {name:'在父级查找元素 $("ul").find(".class") '},
+                            ]
+                        },
+                    ]
+                },
+                {
+                    name:'元素操作',
+                    children:[
+                        {name:'属性操作 attr() removeAttr()'},
+                        {name:'样式操作 css()  addClass removeClass'},
+                        {name:'文本操作 text() html()'},
+                        {name:'form元素的操作'},
+                        {
+                            name:'其他',
+                            children:[
+                                {name:'获取元素相对文档的偏移  offset'},
+                                {name:'获取元素相对父级元素的偏移  position'},
+                                {name:'元素的滚动距离（既可以获取也可以设置）  scrollLeft scrollTop'},
+                                {name:'宽度高度 $(window).width()-可视区的宽度 $(document).height()-获取整个文档的高度'},
+                            ]
+                        },
+
+                    ]
+                },
+                {
+                    "name": "事件",
+                    children:[
+                        {
+                            name:'事件绑定',
+                            children:[
+                                {
+                                    name:'基本绑定',
+                                    children:[
+                                        {name:"$(element).click(function(){})"},
+                                        {name:"$(element).dbclick(function(){})"},
+                                        {name:"..."},
+                                        {name:"加载完毕事件 $(document).ready(function(){})和$(function(){})"},
+                                    ]    
+                                },
+                                {
+                                    name:'方法绑定',
+                                    children:[
+                                        {name:'$(element).bind("click",function(){})'},
+                                        {name:'$(element).unbind()'}
+
+                                    ]    
+                                },
+                                {name:'动态绑定  $(element).live("click",function(){})'},
+                            ]
+                        },
+                        {name:"事件触发  $(element).trigger('click')"},
+                        {name:"阻止事件的冒泡行为  return false"},
+                        {name:"获得当前鼠标的位置 $(element).click(function(){ var x=e.clientX,y=e.clientY,_x = e.pageX})"},
+                    ]
+                },
+                {
+                    "name": "特效",
+                    children:[
+                        {name:'快速显示和隐藏： $(element).hide() $(element).show()'},
+                        {name:'滚动显示和隐藏： $(element).slideDown() $(element).slideUp()'},
+                        {name:'渐隐渐现 ： $(element).fadeIn() $(element).fadeUp()'},
+                        {name:'自定义动画 ： $(element).animate({},2000)'},
+                        {name:'停止 ： $(element).stop()'},
+                        {name:'延时 ： $(element).delay(2000)'},
+                    ]
+                },
+                {
+                    "name": "Ajax",
+                    "children": [
+                        {name:'$.get'},
+                        {name:'$.post'},
+                        {
+                            name:'$.ajax',
+                            children:[
+                                {name:'url:请求的脚本'},
+                                {name:'data:发送的数据'},
+                                {name:'dataType：数据的类型'},
+                                {name:'type：请求的类型'},
+                                {name:'success：成功的回调'},
+                                {name:'error：失败的回调'},
+                                {name:'timeout：超时时间'},
+                                {name:'async：是否异步'},
+                            ]
+                        },
+
+                    ]
+                },
+            ]
+        };
+
+        // 指定图表的配置项和数据
+        var option = {
+            tooltip: {
+                trigger: 'item',
+                triggerOn: 'mousemove'
+            },
+            legend: {
+                top: '2%',
+                left: '3%',
+                orient: 'vertical',
+                data: [{
+                    name: 'jQuery',
+                    icon: 'rectangle'
+                }],
+                borderColor: '#c23531'
+            },
+            series:[
+                {
+                    type: 'tree',
+                    name: 'jQuery',
+                    data: [data2],
+
+                    top: '20%',
+                    left: '10%',
+                    bottom: '22%',
+                    right: '50%',
+
+                    symbolSize: 11,
+
+                    label: {
+                        normal: {
+                            position: 'left',
+                            verticalAlign: 'middle',
+                            align: 'right'
+                        }
+                    },
+
+                    leaves: {
+                        label: {
+                            normal: {
+                                position: 'right',
+                                verticalAlign: 'middle',
+                                align: 'left'
+                            }
+                        }
+                    },
+
+                    expandAndCollapse: true,
+
+                    animationDuration: 550,
+                    animationDurationUpdate: 750
+                }
+            ]
+        }
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+</body>
+</html>
